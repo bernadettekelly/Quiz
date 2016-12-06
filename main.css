@@ -1,0 +1,70 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto';
+}
+
+header {
+	width: 1000px;
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+
+h1 {
+	font-size: 18px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+
+main {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ul {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+li {
+	font-size: 16px;
+}
+
+.button-A,.button-B, .button-C, .button-D {
+	border: 3px solid grey;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+.button-A, .button-B, .button-C, .button-D:hover {
+    cursor: pointer;
+}
+
+.next {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+
+.green-on {
+	background-color: green;
+}
+
+.red-on {
+	background-color: red;
+}
+
+.repeat {
+	height: 40px;
+	font-size: 14px;
+}
+
+
+
