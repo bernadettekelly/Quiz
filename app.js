@@ -2,14 +2,16 @@ $('.page-1').hide(function('.page-2', '.page-3', '.page-4', '.page-5', '.page-6'
 });
 
 $('.start').click(function() {
-	$('.page-1').hide();
+	$('.page').hide();
+	$('.page-1').show();
 });
 
 $('.page-2').hide(function('.page-1', '.page-3', '.page-4', '.page-5', '.page-6', '.page-7', .page-8') {
 });
 
 $('.next1').submit(function() {
-	$('.page-2').hide();
+	$('.page').hide();
+	$('.page-2').show();
 });
 
 $('.page-3').hide(function('.page-1', '.page-2', '.page-4', '.page-5', '.page-6', '.page-7', .page-8') {
@@ -54,9 +56,28 @@ $('.next6').submit(function() {
 	$('page-7').hide();
 });
 
-$('#quiz-form-1').submit(function(event) {
+var totalCorrect = 0;
+var totalIncorrect = 0;
+
+$('.total-correct').text(totalCorrect);
+
+//$('#quiz-form-2 button[type="button"]').click(function(event){
+$('#quiz-form-2').submit(function(event) {
 	event.preventDefault();
+	var choosenOne = $(event.currentTarget).attr('class');
+	if(choosenOne == 'button-A'){
+		totalCorrect++;
+		$('.total-correct').text(totalCorrect);
+	}
+	else{
+		totalIncorrect++;
+		$('.total-incorrect').text(totalIncorrect);
+	}
+	$('#quiz-form-2 button[type="button"]').addClass('red-on');
+	$('#quiz-form-2 .button-A').addClass('green-on');
 });
+
+
 
 $('#quiz-form-2').submit(function(event) {
 	event.preventDefault();
@@ -89,7 +110,7 @@ function colors() {
 function colorAnswer1() {
 	var selectedAnswer = colors();
 	if (selectedAnswer === '.button-A') {
-		$(#quiz-form-2.'.button-A').addClass('.green-on');
+		$('#quiz-form-2 .button-A').addClass('.green-on');
 	}
 	if (selectedAnswer === '.button-B') {
 		$(#quiz-form-2.'.button-B').addClass('.red-on');

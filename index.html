@@ -4,34 +4,33 @@
 <head>
 	<title>Pride and Prejudice Quiz</title>
 </head>
-<div class="page-1">
+<div class="page page-1">
  <body>
   <form id="quiz-form-1"><form action="/page-2" method="post">
 	<main>Start Quiz
-		<button type="submit">
-			<span class="start">Start
+		<button class="start" type="submit">
+			<span>Start</span>
 		</button>
-			</span>
 	</main>
  </form>
 <header>Pride and Prejudice Quiz
 </header>
 </div>
-<div class="page-2">
+<div class="page page-2">
   <main>
     <form id="quiz-form-2"><form action="#" method="post">
 		<h1>Question 1: What is the name of Mr. Darcy's home?</h1>
 			<ul class="question-1-answers">
-				<li><button class="button-A">
+				<li><button type="button" class="button-A">
 					<span class="button-label">A</span></button>Pemberley
 				</li>
-				<li><button class="button-B">
+				<li><button type="button" class="button-B">
 					<span class="button-label">B</span></button>Longbourne
 				</li>
-				<li><button class="button-C">
+				<li><button type="button" class="button-C">
 				<span class="button-label">C</span></button>Mansfield Park
 				</li>
-				<li><button class="button-D">
+				<li><button type="button" class="button-D">
 				<span class="button-label">D</span></button>Rosings Park</li>
 			</ul>
 			<p><button type="submit"><span class="next1">Next</span></button>
@@ -39,7 +38,7 @@
 		</form>
 	</main>
 </div>
-<div class="page-3">
+<div class="page page-3">
     <main>
 		<form id="quiz-form-3"><form action="#" method="post">
 			<h1>Question 2: Who marries Mr. Collins?</h1>
@@ -152,8 +151,8 @@
 			<footer>
 			<dv class="Score-4">
 			<ul>
-            	<li>Total Correct:</li>
-            	<li>Total Incorrect:</li>
+            	<li>Total Correct: <span class="total-correct"></span></li>
+            	<li>Total Incorrect: <span class="total-incorrect"></span></li>
             </ul>
 			</footer>
 		</form>
@@ -181,8 +180,8 @@
 			<footer>
 				<div class="Score-5">
 			<ul>
-            	<li>Total Correct:</li>
-            	<li>Total Incorrect:</li>
+            	<li>Total Correct: <span class="total-correct"></span></li>
+            	<li>Total Incorrect: <span class="total-incorrect"></span></li>
             </ul>
 				</div>
 			</footer>
