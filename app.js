@@ -1,10 +1,20 @@
+var totalCorrect = 0;
+var totalIncorrect = 0;
+
+$(document).ready(function(){
+	$('.page').hide();
+	$('.page-1').show();
+	$('.total-correct').text(totalCorrect);
+	$('.total-incorrect').text(totalIncorrect);
+});
 
 $('.start').click(function() {
 	$('.page').hide();
 	$('.page-2').show();
 });
 
-$('.next1').submit(function() {
+$('.next1').click(function(e) {
+	e.preventDefault();
 	$('.page').hide();
 	$('.page-3').show();
 });
@@ -39,23 +49,14 @@ $('.repeat').submit(function() {
 	$('.page-1').show();
 });
 
-var totalCorrect = 0;
-var totalIncorrect = 0;
-
-$('.total-correct').text(totalCorrect);
-$('.total-incorrect').text(totalIncorrect);
-
 $('#quiz-form-1').submit(function(event){
   event.preventDefault();
 });
 
 $('#quiz-form-2 button[type="button"]').click(function(event){
 	event.preventDefault();
-
-$('#quiz-form-2').submit(function(event) {
-	event.preventDefault();
 	var chooseOne = $(event.currentTarget).attr('class');
-	if(chooseOne == '.button-A'){
+	if(chooseOne == 'button-A'){
 		totalCorrect++;
 		$('.total-correct').text(totalCorrect);
 	}
@@ -63,11 +64,9 @@ $('#quiz-form-2').submit(function(event) {
 		totalIncorrect++;
 		$('.total-incorrect').text(totalIncorrect);
 	}
-	$('#quiz-form-2 button[type="button"]').addClass('.red-on');
-	$('#quiz-form-2 .button-A').addClass('.green-on');
+	$('#quiz-form-2 button[type="button"]').addClass('red-on');
+	$('#quiz-form-2 .button-A').addClass('green-on');
 });
-}
-)
 
 $('#quiz-form-3 button[type="button"]').click(function(event){
 	event.preventDefault();
